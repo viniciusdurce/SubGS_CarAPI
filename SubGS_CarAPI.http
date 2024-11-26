@@ -1,0 +1,6 @@
+@SubGS_CarAPI_HostAddress = http://localhost:5212
+
+GET {{SubGS_CarAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
