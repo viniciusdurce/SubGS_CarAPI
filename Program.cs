@@ -2,6 +2,7 @@ using System.Text.Json;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 using SubGS_CarAPI.Data;
+using SubGS_CarAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,7 @@ builder.Services.AddScoped(sp =>
 });
 
 builder.Services.AddSingleton<MongoDbService>();
+builder.Services.AddScoped<CarService>(); 
 
 
 var app = builder.Build();
